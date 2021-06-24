@@ -1,0 +1,109 @@
+/* default settings */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* primary colors */
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --brightyellow: hsl(71, 73%, 54%);
+    --lightGray: hsl(204, 43%, 93%);
+    --grayishBlue: hsl(218, 22%, 67%);
+}
+
+/* rules start here */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--lightGray);
+    font-size: 16px;
+}
+
+.container {
+    margin: 8vw auto;
+    width: 45vw;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 0.75fr 1.25fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "whiten whiten"
+        "darker dark";
+}
+
+.white-card {
+    background-color: white;
+    grid-area: whiten;
+    padding: 10% 5%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.darker-card {
+    color: white;
+    background-color: var(--cyan);
+    border-bottom-left-radius: 10px;
+    grid-area: darker;
+    padding: 10% 10% 0 10%;
+}
+
+.darker-card p {
+    margin: 5px 0;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.bigger {
+    font-size: 2em;
+    margin-right: 0.3em;
+}
+
+button {
+    margin: 3em auto;
+    color: white;
+    padding: 0.7em 6em;
+    background-color: var(--brightyellow);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 10 10 gray;
+}
+
+.dark-card {
+    color: var(--lightGray);
+    background-color: hsl(179, 62%, 49%);
+    border-bottom-right-radius: 10px;
+    grid-area: dark;
+    padding: 11%;
+}
+
+.dark-card p {
+    margin: 5px 0;
+}
+
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+    .container {
+        width: 70vw;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+            "whiten"
+            "darker"
+            "dark";
+    }
+    .darker-card {
+        border-radius: 0;
+    }
+    .dark-card {
+        border-bottom-left-radius: 10px;
+    }
+}
+
