@@ -8,6 +8,7 @@
     --brightyellow: hsl(71, 73%, 54%);
     --lightGray: hsl(204, 43%, 93%);
     --grayishBlue: hsl(218, 22%, 67%);
+    
 }
 
 /* rules start here */
@@ -19,12 +20,13 @@
 
 body {
     background-color: var(--lightGray);
+    font-family: 'Karla', sans-serif;
     font-size: 16px;
 }
 
 .container {
     margin: 8vw auto;
-    width: 45vw;
+    width: 50vw;
     border-radius: 10px;
     display: grid;
     grid-template-rows: 0.75fr 1.25fr;
@@ -34,10 +36,28 @@ body {
         "darker dark";
 }
 
+.heading {
+    color: hsl(179, 62%, 43%);
+    font-size: 1.5em;
+    margin-bottom: 0.75em;
+}
+
+.subs {
+    color: hsl(71, 73%, 54%);
+    margin-bottom: 0.5em;
+    font-size: 1.2em;
+}
+
+.par {
+    color: hsl(218, 22%, 67%);
+    line-height: 1.35em;
+    font-size: 1em;
+}
+
 .white-card {
     background-color: white;
     grid-area: whiten;
-    padding: 10% 5%;
+    padding: 2.75em 2.5em;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
@@ -47,7 +67,12 @@ body {
     background-color: var(--cyan);
     border-bottom-left-radius: 10px;
     grid-area: darker;
-    padding: 10% 10% 0 10%;
+    padding: 2.5em 2.5em 0 2.5em;
+}
+
+#title1 {
+    font-size: 1.15em;
+    margin-bottom: 1em;
 }
 
 .darker-card p {
@@ -58,21 +83,26 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    color: var(--lightGray);
 }
 
 .bigger {
     font-size: 2em;
     margin-right: 0.3em;
+    font-weight: bolder;
+    color: white;
 }
 
 button {
-    margin: 3em auto;
+    margin: 2em auto;
     color: white;
-    padding: 0.7em 6em;
+    padding: 1em 6em;
     background-color: var(--brightyellow);
     border: none;
     border-radius: 5px;
     box-shadow: 10 10 gray;
+    font-family: 'Karla';
+    font-size: 1em;
 }
 
 .dark-card {
@@ -80,13 +110,20 @@ button {
     background-color: hsl(179, 62%, 49%);
     border-bottom-right-radius: 10px;
     grid-area: dark;
-    padding: 11%;
+    padding: 3em 3em 0 3em;
 }
 
 .dark-card p {
-    margin: 5px 0;
+    margin: 0.25em 0;
+    color: var(--lightGray);
+    font-size: 0.9em;
 }
 
+.dark-card h5 {
+    color: white;
+    font-size: 1.15em;
+    margin-bottom: 1em;
+}
 
 /* Responsive */
 @media screen and (max-width: 600px) {
@@ -104,6 +141,7 @@ button {
     }
     .dark-card {
         border-bottom-left-radius: 10px;
+        padding-bottom: -1em;
     }
 }
 
